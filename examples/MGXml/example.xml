@@ -1,0 +1,38 @@
+<Genome id="0" name="Laparosopic Surgery">
+	<Fitness>
+		<Bound valid="123" min="10" opt="25" max="40"/>
+		<Bound valid="101" min="11" opt="12" max="15"/>
+	</Fitness>
+	<Genome id="11" name="Paternity Leave">
+		<Pick id="111" name="Decreased Foetal movements" set="32"/>
+		<Pick id="112" name="Dislocation" set="23">
+			<Init>11</Init>
+		</Pick>
+		<Pick id="113" name="Foreign Body" set="46"/>
+	</Genome>
+	<Choose id="22" name="Grief Reaction">
+		<Genome id="222" name="Placenta Previa">
+			<Pick id="2221" name="Threatened abortion">
+				<Set>18</Set>
+				<Set>43</Set>
+			</Pick>
+			<Pick id="2222" name="Thrombophlebitis">
+				<Set>25</Set>
+				<Recipe>48</Recipe>
+			</Pick>
+			<Pick id="2223" name="Hearing Loss"	set="7"/>
+			<Pick id="2224" name="Migraine"		set="14"/>
+			<Pick id="2225" name="Nervous Debility"	set="39"/>
+			<Pick id="2226" name="Poisoning"	set="3"/>
+		</Genome>
+		<Pick id="221" name="Sciatic Pain" set="2"/>
+	</Choose>
+	<Genome id="33" name="Vomiting">
+		<Pick id="331" name="Water Infection">
+			<Recipe>12</Recipe>
+			<Recipe>8</Recipe>
+			<Recipe>91</Recipe>
+		</Pick>
+		<Pick id="332" name="Wax" set="42"/>
+	</Genome>
+</Genome>

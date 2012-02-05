@@ -1,0 +1,45 @@
+Seven sorts of sucking XML
+
+DOM
+  * memoriaigenyes
+  * a DOM-ot attol meg fel kel dolgozni kezzel,
+    ettol nem menekulunk meg
+  * ez a feldolgozas nehezkes es unalmas
+  * XPath-tal konnyebb, de lassithat
+  * lehet osztalyt is generaltatni, errol kesobb
+SAX
+  * zero overhead, real-time
+  * nincs state, ha akarsz arrol magadnak kell gondoskodni
+  * ez kulonosen akkor limitalo amikor egy elementet csak
+    azutan tudsz feldolgozni amikor mar lezarult, pl. mert
+    szukseged van a hasaban levo szovegre vagy az attribokra
+  * egyszeru dolgokra pl. linkek kifilterelesere nagyszeru
+pull parser
+  [ xpp.java       ]
+XML::Simple
+  * egybol hasznalhato adatstrukturat csinal
+  * erosen tipusos nyelvek melle nem alkalmas
+    (QVariant, GValue)
+  * nem feltetlenul csinalja pont azt amit szeretnenk,
+    sok konfiguralas
+  [ example.xml    ]
+  [ example.pl     ]
+XML::Twig
+  [ example.pl     ]
+  * kepes a DOM es a SAX elonyeit egyesiteni
+  * kenyelmes
+  * de ez sem koltseg nelkuli (XPath)
+myxml
+  * obviously biased resz
+  [ myxml-abbrev.h ]
+MGXml
+  [ Reader.h       ]
+  [ example.h      ]
+  [ Reader-abbrev.cc ]
+
+conclusion:
+  * tobb lehetoseg kozul lehet valasztani
+  * a valasztekot korlatozza az adott nyelvi kornyezet
+  * ha van ra lehetoseg, ne habozzunk a nyelvet ez alapjan megvalasztani
+
+http://perl-xml.sourceforge.net/faq/#cpan_modules

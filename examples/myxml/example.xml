@@ -1,0 +1,108 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:gcal="http://schemas.google.com/gCal/2005" xmlns:gd="http://schemas.google.com/g/2005" xmlns:opensearch="http://a9.com/-/spec/opensearchrss/1.0/">
+  <id>
+    http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full
+  </id>
+  <updated>
+    2007-08-30T11:07:47.000Z
+  </updated>
+  <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+  <title type="text">
+    Baromkodok
+  </title>
+  <subtitle type="text">
+  </subtitle>
+  <link href="http://www.google.com/calendar/embed?src=7vq8clqi0usp84h5g10hdl4au4@group.calendar.google.com" rel="alternate" type="text/html" />
+  <link href="http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" />
+  <link href="http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full?max-results=25" rel="self" type="application/atom+xml" />
+  <author>
+    <name>
+      Johnny Mnemonic
+    </name>
+    <email>
+      borso@vekoll.saturnus.vein.hu
+    </email>
+  </author>
+  <generator uri="http://www.google.com/calendar" version="1.0">
+    Google Calendar
+  </generator>
+  <opensearch:totalresults>
+    2
+  </opensearch:totalresults>
+  <opensearch:startindex>
+    1
+  </opensearch:startindex>
+  <opensearch:itemsperpage>
+    25
+  </opensearch:itemsperpage>
+  <gd:where valuestring="Abban a hombar fejemben"/>
+  <gcal:timezone value="America/Chicago"/>
+  <entry>
+    <id>
+      http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full/mv8vis75rmcdcs9qa80cg3kcdc
+    </id>
+    <published>
+      2007-08-29T14:44:40.000Z
+    </published>
+    <updated>
+      2007-08-30T11:07:47.000Z
+    </updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="text">
+      Lehanylak
+    </title>
+    <content type="text">
+      Leokadlak, lerokazlak, beboritalak repakockaval.
+    </content>
+    <link href="http://www.google.com/calendar/event?eid=bXY4dmlzNzVybWNkY3M5cWE4MGNnM2tjZGMgN3ZxOGNscWkwdXNwODRoNWcxMGhkbDRhdTRAZw" rel="alternate" title="alternate" type="text/html" />
+    <link href="http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full/mv8vis75rmcdcs9qa80cg3kcdc" rel="self" type="application/atom+xml" />
+    <author>
+      <name>
+        Johnny Mnemonic
+      </name>
+      <email>
+        borso@vekoll.saturnus.vein.hu
+      </email>
+    </author>
+    <gd:comments>
+      <gd:feedlink href="http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full/mv8vis75rmcdcs9qa80cg3kcdc/comments"/>
+    </gd:comments>
+    <gd:eventstatus value="http://schemas.google.com/g/2005#event.confirmed"/>
+    <gd:transparency value="http://schemas.google.com/g/2005#event.transparent"/>
+    <gd:when endtime="2007-08-31T21:00:00.000-05:00" starttime="2007-08-31T20:00:00.000-05:00"/>
+    <gd:where valuestring="Barhol ahol eszembe jutsz"/>
+  </entry>
+  <entry>
+    <id>
+      http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full/p41rs8cjt35c6miqfevcdel2ls
+    </id>
+    <published>
+      2007-08-29T14:47:22.000Z
+    </published>
+    <updated>
+      2007-08-29T14:47:22.000Z
+    </updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/g/2005#event"/>
+    <title type="text">
+      Lefoslak
+    </title>
+    <content type="text">
+      Higan, nagy mennyisegben, harom tal romlott lencsefozelek utan.
+    </content>
+    <link href="http://www.google.com/calendar/event?eid=cDQxcnM4Y2p0MzVjNm1pcWZldmNkZWwybHNfMjAwNzA5MDJUMDYwMDAwWiA3dnE4Y2xxaTB1c3A4NGg1ZzEwaGRsNGF1NEBn" rel="alternate" title="alternate" type="text/html" />
+    <link href="http://www.google.com/calendar/feeds/7vq8clqi0usp84h5g10hdl4au4%40group.calendar.google.com/private-3561269827875dd955e1af567c4238a2/full/p41rs8cjt35c6miqfevcdel2ls" rel="self" type="application/atom+xml" />
+    <author>
+      <name>
+        Johnny Mnemonic
+      </name>
+      <email>
+        borso@vekoll.saturnus.vein.hu
+      </email>
+    </author>
+    <gd:recurrence>
+      DTSTART;TZID=Pacific/Honolulu:20070901T200000 DTEND;TZID=Pacific/Honolulu:20070901T223000 RRULE:FREQ=WEEKLY;INTERVAL=8;BYDAY=SU,WE,FR;WKST=SU BEGIN:VTIMEZONE TZID:Pacific/Honolulu X-LIC-LOCATION:Pacific/Honolulu BEGIN:STANDARD TZOFFSETFROM:-1000 TZOFFSETTO:-1000 TZNAME:HST DTSTART:19700101T000000 END:STANDARD END:VTIMEZONE 
+    </gd:recurrence>
+    <gd:eventstatus value="http://schemas.google.com/g/2005#event.confirmed"/>
+    <gd:transparency value="http://schemas.google.com/g/2005#event.opaque"/>
+    <gd:where valuestring="Jo magasrol, hadd toccsanjon"/>
+  </entry>
+</feed>

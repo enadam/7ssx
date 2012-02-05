@@ -1,0 +1,218 @@
+%
+% ohp.tex
+%
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{bbding}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[overlystylish]{albatross}
+
+% Times is evil
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+\title{Seven sorts of sucking XML}
+\author{madam}
+\let\saveinsertauthor=\insertauthor
+\def\insertauthor{%
+	{\usebeamercolor[fg]{author}as told by}
+	\textrm{\textit{\saveinsertauthor}}}
+\date{Blumsoft Code Gardening, \today}
+
+\makeatletter
+\setbeamertemplate{frametitle}[default][rightskip=0pt]
+\addtobeamertemplate{frametitle}{%
+	\def\insertframetitle{\insertsection\hfill\beamer@frametitle}}{}
+% \par\hrule ?
+
+\let\fuckbeamer=\beamer@framenotesbegin
+\def\beamer@framenotesbegin{%
+	\fuckbeamer%
+	\ifx\insertsection\@empty\else
+		\@tempcnta=\beamer@endpageofdocument% HACK!
+		\advance\@tempcnta by -\c@page\relax
+		\ifnum\@tempcnta>0
+			\gdef\beamer@frametitle{\the\@tempcnta}%
+		\else
+			\gdef\beamer@frametitle{KTHXBYE}%
+		\fi
+	\fi}
+\makeatother
+
+\colorlet{maff}{red!80!yellow}
+\lstset{columns=flexible,keepspaces=true,%
+	stringstyle=\color{orange},%
+	commentstyle=\color{blue},%
+	emphstyle=\color{maff}}
+
+\def\Piss{\item[\lower.5ex\hbox{\XSolidBrush}]}
+\def\Yeah{\item[\Checkmark]}
+
+%\includeonlyframes{current}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% This is not a frametitle but nevermind.
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
+
+\section{DOM}
+
+\begin{frame}
+\begin{itemize}
+\Piss	memory consumption
+\Piss	still needs manual processing
+\Piss	\dots which can be awkward
+\Piss	\dots and you risk dying of \alert{bore}DOM
+\Yeah	XPath may help a lot
+\Piss	\dots but that may be slow
+\end{itemize}
+\end{frame}
+
+\section{SAX}
+
+\begin{frame}
+\begin{itemize}
+\Yeah	zero-overhead, real-time
+\Piss	you are not in control
+\Piss	you need to accumulate context yourself
+\Piss	it is hard to catch invalid documents
+\Yeah	\dots but comes handy for ad-hoc filtering
+\end{itemize}
+\end{frame}
+
+\section{Pull parsers}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=Java,%
+	basicstyle=\small\ttfamily\color{white},keywordstyle=\color{yellow},%
+	emph=next]
+	{examples/xpp.java}
+\end{frame}
+
+\section{\texttt{XML::Simple}}
+
+\begin{frame}
+\begin{itemize}
+\Yeah	produces ready-to-use data structures
+\Piss	not for strongly typed languages
+\Piss	may not be trivial to get it right
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=XML,%
+	basicstyle=\small\ttfamily\color{yellow},tagstyle=\color{white},%
+	breaklines=true,breakatwhitespace=true]
+	{examples/XML::Simple/example.xml}
+\end{frame}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=Perl,%
+	basicstyle=\small\ttfamily\color{yellow}]
+	{examples/XML::Simple/example.pl}
+\end{frame}
+
+\section{\texttt{XML::Twig}}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=Perl,%
+	basicstyle=\small\ttfamily\color{white},%
+	keywordstyle=\color{yellow},%
+	emph=purge]
+	{examples/XML::Twig.pl}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\Yeah	less memory-hungry than DOM
+\Yeah	has more context than SAX
+\Piss	twig processing is like DOM
+\Piss	convenience comes at a price
+\end{itemize}
+\end{frame}
+
+\section{\texttt{myXML}}
+
+\begin{frame}[fragile]
+\begin{multicols}{2}
+\begin{itemize}
+\item	\verb|myxml_begin()|
+\item	\verb|myxml_process()|
+\item	\verb|myxml_finish()|
+\columnbreak
+\item	\verb|myxml_get_attr()|
+\item	\verb|myxml_node_is()|
+\item	\verb|myxml_get_text()|
+\end{itemize}
+\end{multicols}
+
+\begin{itemize}
+\item	\verb|myxml_node_started()|
+\item	\verb|myxml_node_closed()|
+\item	\verb|myxml_ignored_node_started()|
+\item	\verb|myxml_ignored_text_node_started()|
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=C++,%
+	basicstyle=\small\ttfamily\color{white},%
+	keywordstyle=\color{yellow},%
+	emph={state,myxml\_get\_state},%
+	moreemph={myxml\_node\_starts\_if,myxml\_text\_node\_starts\_if},%
+	moreemph={myxml\_ignored\_node\_started}]
+	{examples/myxml/example-abbrev.c}
+\end{frame}
+
+\section{\texttt{MGXml}}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=C++,%
+	basicstyle=\small\ttfamily\color{white},%
+	keywordstyle=\color{yellow},%
+	emph=event]
+	{examples/MGXml/Reader.h}
+\end{frame}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=C++,%
+	basicstyle=\small\ttfamily\color{white},%
+	keywordstyle=\color{yellow},%
+	alsoletter=:,emph={event,gslib::gsxml::Reader}]
+	{examples/MGXml/example.h}
+\end{frame}
+
+\begin{frame}[fragile]
+\lstinputlisting[language=C++,%
+	basicstyle=\small\ttfamily\color{white},%
+	keywordstyle=\color{yellow},%
+	morekeywords=event,
+	emph={Start,Text,Finish}]
+	{examples/MGXml/Reader-abbrev.cc}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+\pgfdeclaremask{mask}{images/lollypop-mask}
+\pgfimage[mask=mask,width=5cm]{images/lollypop}
+\begin{itemize}
+\item	There's More Than One Way To Do It.
+\item	\dots which is limited by our language of choice
+\item	\dots but why not make the choice the other way around?
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+% End of ohp.tex
